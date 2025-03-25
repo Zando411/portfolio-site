@@ -1,0 +1,28 @@
+---
+import '../styles/global.css';
+import { Image } from 'astro:assets';
+import Headshot from '../assets/MichaelHeadshot.jpg';
+import SocialIcons from './SocialIcons.astro';
+---
+
+<div
+  class="container mx-auto p-4 flex flex-col-reverse text-center items-center md:flex-row md:items-start md:text-start justify-between gap-4"
+>
+  <div class="flex flex-col items-center md:items-start gap-4">
+    <div>
+      <h1 class="text-5xl font-bold">Michael Zandonella</h1>
+      <p class="text-lg pr-4 text-gray-300 mt-4">
+        19 year old software engineer and student based in Corvallis Oregon,
+        currently attending Oregon State University.
+      </p>
+    </div>
+    <SocialIcons />
+  </div>
+  <Image
+    src={Headshot}
+    alt="A headshot of Michael"
+    loading="lazy"
+    height="220"
+    class="rounded-2xl"
+  />
+</div>
