@@ -3,11 +3,11 @@
 import { cn } from "@/lib/utils";
 import {
   AnimatePresence,
-  HTMLMotionProps,
+  type HTMLMotionProps,
   motion,
   useMotionValue,
 } from "motion/react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type JSX } from "react";
 
 interface PointerProps extends Omit<HTMLMotionProps<"div">, "ref"> {}
 
