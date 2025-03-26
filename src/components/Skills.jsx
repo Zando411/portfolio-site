@@ -1,6 +1,7 @@
 import '../styles/global.css';
 import SkillBox from './SkillBox';
 import { Pointer } from './magicui/pointer';
+import { useState } from 'react';
 
 const skills = [
   { name: 'HTML', className: 'devicon-html5-plain' },
@@ -16,6 +17,7 @@ const skills = [
 ];
 
 export default function Skills() {
+  const [hovered, setHovered] = useState(false);
   return (
     <div>
       <div className="container p-4 grid grid-cols-2 gap-4 md:grid-cols-5">
@@ -24,6 +26,7 @@ export default function Skills() {
             key={index}
             className={skill.className}
             skillName={skill.name}
+            setHovered={setHovered}
           />
         ))}
       </div>
@@ -39,6 +42,13 @@ export default function Skills() {
           <circle cx="12" cy="12" r="5" className="fill-white" />
         </svg>
       </Pointer>
+      <div
+        className={` ${
+          hovered
+            ? 'absolute top-0 left-0 w-full h-full bg-black/70 z-30 transition-all duration-200 ease-in-out'
+            : ''
+        }`}
+      ></div>
     </div>
   );
 }
