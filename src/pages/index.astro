@@ -4,6 +4,7 @@ import '../styles/global.css';
 
 import About from '../components/About.astro';
 import Skills from '../components/Skills.jsx';
+import Experience from '../components/Experience.astro';
 ---
 
 <Layout>
@@ -11,5 +12,6 @@ import Skills from '../components/Skills.jsx';
     <About />
     <hr class="border-gray-300" />
     <Skills client:load />
+    <Experience />
   </div>
 </Layout>

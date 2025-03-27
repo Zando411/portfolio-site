@@ -1,0 +1,37 @@
+---
+import ExperienceButton from './ExperienceButton.astro';
+---
+
+<div class="container">
+  <div
+    id="switcher"
+    class="w-full items-center justify-center rounded-lg bg-gray-800 p-1 mb-2 grid grid-cols-2"
+  >
+    <ExperienceButton title="Work" active />
+    <ExperienceButton title="Education" />
+  </div>
+</div>
+
+<script>
+  const switcher = document.getElementById('switcher');
+  const workButton = document.getElementById('workButton');
+  const educationButton = document.getElementById('educationButton');
+
+  workButton.addEventListener('click', () => {
+    if (workButton?.hasAttribute('data-active')) {
+      return;
+    }
+    switcher.dataset.active = 'work';
+    workButton?.toggleAttribute('data-active');
+    educationButton?.toggleAttribute('data-active');
+  });
+
+  educationButton.addEventListener('click', () => {
+    if (educationButton?.hasAttribute('data-active')) {
+      return;
+    }
+    switcher.dataset.active = 'education';
+    educationButton?.toggleAttribute('data-active');
+    workButton?.toggleAttribute('data-active');
+  });
+</script>
