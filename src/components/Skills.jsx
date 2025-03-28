@@ -45,7 +45,7 @@ export default function Skills() {
       <div
         className={` ${
           hovered
-            ? 'absolute top-0 left-0 w-full h-full bg-black/70 z-30 transition-all duration-200 ease-in-out'
+            ? 'fixed inset-0 w-full h-full bg-black/70 z-30 transition-all duration-200 ease-in-out'
             : ''
         }`}
       ></div>
