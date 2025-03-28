@@ -1,6 +1,7 @@
 ---
 import ExperienceButton from './ExperienceButton.astro';
 import ExperienceContent from './ExperienceContent.astro';
+import ExperiencePoint from './ExperiencePoint.astro';
 ---
 
 <div class="container">
@@ -11,29 +12,59 @@ import ExperienceContent from './ExperienceContent.astro';
     <ExperienceButton title="Work" active />
     <ExperienceButton title="Education" />
   </div>
-  <ExperienceContent />
+  <ExperienceContent id="Work" active>
+    <ExperiencePoint
+      imagePath="/beaverstore.jpg"
+      link="https://osubeaverstore.com/"
+      date="June 2024 - Present"
+      location="OSU Beaver Store"
+      role="Web Assistant"
+      bullets={[
+        'Collaborated with the Website Specialist to maintain web content quality, including image editing with Adobe Photoshop',
+        'Identified and managed product listings for online activation, ensuring up-to-date availability and optimal presentation',
+        'Processed web and phone orders with accuracy and efficiency, ensuring secure transactions and high customer satisfaction',
+      ]}
+    />
+  </ExperienceContent>
+
+  <ExperienceContent id="Education">
+    <ExperiencePoint
+      imagePath="/OSUCrest.png"
+      link="https://oregonstate.edu/"
+      date="September 2023 - Present"
+      location="Oregon State University"
+      role="Bachelor of Science in Computer Science"
+      bullets={['3.97 GPA', 'Expected to graduate Winter 2026']}
+    />
+  </ExperienceContent>
+
+  <script>
+    const switcher = document.getElementById('switcher');
+    const workButton = document.getElementById('workButton');
+    const educationButton = document.getElementById('educationButton');
+    const workContent = document.getElementById('Work');
+    const educationContent = document.getElementById('Education');
+
+    workButton.addEventListener('click', () => {
+      if (workButton?.hasAttribute('data-active')) {
+        return;
+      }
+      workButton?.toggleAttribute('data-active');
+      educationButton?.toggleAttribute('data-active');
+
+      workContent.toggleAttribute('data-active');
+      educationContent.toggleAttribute('data-active');
+    });
+
+    educationButton.addEventListener('click', () => {
+      if (educationButton?.hasAttribute('data-active')) {
+        return;
+      }
+      educationButton?.toggleAttribute('data-active');
+      workButton?.toggleAttribute('data-active');
+
+      workContent.toggleAttribute('data-active');
+      educationContent.toggleAttribute('data-active');
+    });
+  </script>
 </div>
-
-<script>
-  const switcher = document.getElementById('switcher');
-  const workButton = document.getElementById('workButton');
-  const educationButton = document.getElementById('educationButton');
-
-  workButton.addEventListener('click', () => {
-    if (workButton?.hasAttribute('data-active')) {
-      return;
-    }
-    switcher.dataset.active = 'work';
-    workButton?.toggleAttribute('data-active');
-    educationButton?.toggleAttribute('data-active');
-  });
-
-  educationButton.addEventListener('click', () => {
-    if (educationButton?.hasAttribute('data-active')) {
-      return;
-    }
-    switcher.dataset.active = 'education';
-    educationButton?.toggleAttribute('data-active');
-    workButton?.toggleAttribute('data-active');
-  });
-</script>
