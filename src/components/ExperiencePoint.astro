@@ -1,0 +1,15 @@
+---
+import ExperienceDescription from './ExperienceDescription.astro';
+import ExperienceProfilePic from './ExperienceProfilePic.astro';
+const { imagePath, link, date, location, role, bullets } = Astro.props;
+---
+
+<li class="relative ml-10 py-4">
+  <ExperienceProfilePic imagePath={imagePath} imageAlt={location} link={link} />
+  <ExperienceDescription
+    date={date}
+    location={location}
+    role={role}
+    bullets={bullets}
+  />
+</li>

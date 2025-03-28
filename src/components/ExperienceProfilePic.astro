@@ -1,0 +1,15 @@
+---
+const { imagePath, imageAlt, link } = Astro.props;
+---
+
+<a
+  href={link}
+  target="_blank"
+  class="absolute -left-16 top-4 rounded-full bg-white outline-1 outline-gray-700"
+>
+  <img
+    src={imagePath}
+    alt={imageAlt}
+    class="object-cover w-12 h-12 rounded-full p-0.5"
+  />
+</a>
