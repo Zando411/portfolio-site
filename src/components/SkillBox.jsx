@@ -18,7 +18,7 @@ export default function SkillBox({ className, skillName, setHovered }) {
       <div
         className={` bg-gray-950 rounded-xl hover:bg-gray-900 transition-colors duration-200 outline-1 outline-gray-700 text-center p-3 ${
           colored
-            ? 'shadow-[0px_0px_60px_30px] shadow-indigo-950/50 ring-2 ring-indigo-900 z-50'
+            ? 'shadow-[0px_0px_60px_30px] shadow-indigo-950/50 ring-2 ring-indigo-900 z-50 animate-pulse'
             : 'shadow-none z-0'
         }`}
         onMouseEnter={() => handleMouseEnter()}
