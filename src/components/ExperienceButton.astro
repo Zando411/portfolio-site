@@ -1,10 +1,17 @@
 ---
-const { title, active } = Astro.props;
+const { title, active, left, right } = Astro.props;
+let addClass = '';
+if (left) {
+  addClass += 'rounded-l-lg';
+}
+if (right) {
+  addClass += 'rounded-r-lg';
+}
 ---
 
 <button
   id={title.toLowerCase() + 'Button'}
   data-active={active ? 'true' : undefined}
-  class="text-sm bg-transparent py-1 rounded-lg cursor-pointer data-active:bg-gray-950"
+  class={`text-sm bg-transparent py-1 cursor-pointer data-active:bg-gray-950 hover:bg-gray-900 hover:transition-colors hover:duration-200 ${addClass}`}
   >{title}</button
 >
