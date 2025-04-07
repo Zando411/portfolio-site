@@ -1,0 +1,22 @@
+---
+import ProjectCard from './ProjectCard.astro';
+---
+
+<div class="container mt-4">
+  <h1 class="text-3xl font-sans font-bold">Projects:</h1>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+    <ProjectCard
+      title="Cat Call"
+      description="Tinder for cat adoption"
+      skills={[
+        'React',
+        'Node.js',
+        'Express',
+        'MongoDB',
+        'Tailwind CSS',
+        'Docker',
+      ]}
+      imageURL={'/catcall.zando.dev.png'}
+    />
+  </div>
+</div>
