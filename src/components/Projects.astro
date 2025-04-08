@@ -1,12 +1,14 @@
 ---
 import ProjectCard from './ProjectCard.astro';
+import CatCallImage from '/public/catcall.zando.dev.png';
+import CATLabelMakerImage from '/public/CATLabelMaker.png';
 ---
 
 <div class="container mt-4">
-  <h1 class="text-3xl font-sans font-bold">Projects:</h1>
+  <h1 class="text-3xl font-sans font-bold text-center">Projects</h1>
   <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
     <ProjectCard
-      title="Cat Call"
+      title="CatCall"
       description="Tinder for cat adoption"
       skills={[
         'React',
@@ -16,7 +18,30 @@ import ProjectCard from './ProjectCard.astro';
         'Tailwind CSS',
         'Docker',
       ]}
-      imageURL={'/catcall.zando.dev.png'}
+      imageURL={CatCallImage}
+      live="https://catcall.zando.dev"
+      repo="https://github.com/Zando411/CatCall"
+    />
+    <ProjectCard
+      title="Portfolio Website"
+      description="The portfolio site you're currently on!"
+      skills={['HTML', 'React', 'Astro', 'Tailwind CSS']}
+      imageURL={CatCallImage}
+      live="https://zando.dev"
+      repo="https://github.com/Zando411/portfolio-website"
+    />
+    <ProjectCard
+      title="Dice Slayer"
+      description="Text and light based dice rolling dungeon crawler played on an arduino"
+      skills={['Arduino', 'C++']}
+      imageURL={CatCallImage}
+      repo="https://github.com/Zando411/Dice-Slayer"
+    />
+    <ProjectCard
+      title="CAT Label Maker"
+      description="Private Python tool that generates printable product labels from catalog numbers by fetching product images and compiling them into a PDF sheet of ready-to-print labels"
+      skills={['Python']}
+      imageURL={CATLabelMakerImage}
     />
   </div>
 </div>
