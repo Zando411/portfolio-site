@@ -13,7 +13,7 @@ const skills = [
   { name: 'Tailwind', className: 'devicon-tailwindcss-plain' },
   { name: 'MongoDB', className: 'devicon-mongodb-plain' },
   { name: 'Python', className: 'devicon-python-plain' },
-  { name: 'C', className: 'devicon-c-plain' },
+  { name: 'C/C++', className: 'devicon-c-plain' },
 ];
 
 export default function Skills() {
