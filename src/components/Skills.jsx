@@ -1,6 +1,5 @@
 import '../styles/global.css';
 import SkillBox from './SkillBox';
-import { Pointer } from './magicui/pointer';
 import { useState } from 'react';
 
 const skills = [
@@ -20,7 +19,10 @@ export default function Skills() {
   const [hovered, setHovered] = useState(false);
   return (
     <div>
-      <div className="container p-4 grid grid-cols-2 gap-4 md:grid-cols-5">
+      <div
+        className="container p-4 grid grid-cols-2 gap-4 md:grid-cols-5"
+        onMouseLeave={() => setHovered(false)}
+      >
         {skills.map((skill, index) => (
           <SkillBox
             key={index}
@@ -30,18 +32,6 @@ export default function Skills() {
           />
         ))}
       </div>
-      <Pointer>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <circle cx="12" cy="12" r="10" className="fill-blue-400" />
-          <circle cx="12" cy="12" r="5" className="fill-white" />
-        </svg>
-      </Pointer>
       <div
         className={` ${
           hovered
