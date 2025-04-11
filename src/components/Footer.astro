@@ -3,9 +3,9 @@
 ---
 
 <script>
-  const wordmark = document.getElementById('wordmark');
+  const logoContainer = document.getElementById('logo-container');
 
-  wordmark.addEventListener('click', () => {
+  logoContainer.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth',
@@ -20,10 +20,11 @@
     © 2025 Michael Zandonella
   </p>
   <div
+    id="logo-container"
     class="flex justify-center items-center text-xl order-1 md:order-2 group h-12 w-16 relative mx-auto"
   >
     <svg
-      id="a"
+      id="logo"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="#f0f5ff"
