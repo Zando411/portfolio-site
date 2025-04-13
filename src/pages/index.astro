@@ -1,16 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
 
-import About from '../components/About.astro';
-import Skills from '../components/Skills.jsx';
-import Experience from '../components/Experience.astro';
-import Projects from '../components/Projects.astro';
-import Footer from '../components/Footer.astro';
+import About from "../components/About.astro";
+import Skills from "../components/Skills.jsx";
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <Layout>
-  <div class="container mx-auto p-4 pb-0 mt-4">
+  <div class="container mx-auto mt-4 p-4 pb-0">
     <About />
     <hr class="border-gray-300" />
     <Skills client:load />

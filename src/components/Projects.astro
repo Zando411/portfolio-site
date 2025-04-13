@@ -1,24 +1,24 @@
 ---
-import ProjectCard from './ProjectCard.astro';
-import CatCallImage from '../assets/catcall.zando.dev.jpg';
-import CATLabelMakerImage from '../assets/CATLabelMaker.png';
-import ZandoDevImage from '../assets/zando.dev.jpg';
-import DiceSlayerImage from '../assets/arduino.jpg';
+import ProjectCard from "./ProjectCard.astro";
+import CatCallImage from "../assets/catcall.zando.dev.jpg";
+import CATLabelMakerImage from "../assets/CATLabelMaker.png";
+import ZandoDevImage from "../assets/zando.dev.jpg";
+import DiceSlayerImage from "../assets/arduino.jpg";
 ---
 
 <div class="container mt-10">
-  <h1 class="text-3xl font-sans font-bold text-center">Projects</h1>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+  <h1 class="text-center font-sans text-3xl font-bold">Projects</h1>
+  <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
     <ProjectCard
       title="CatCall"
       description="A microservice-based, Tinder-style cat adoption platform featuring card-based liking, location-based recommendations, and Dockerized deployment with Node.js, React, and MongoDB"
       skills={[
-        'React',
-        'Node.js',
-        'Express',
-        'MongoDB',
-        'Tailwind CSS',
-        'Docker',
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "Docker",
       ]}
       imageURL={CatCallImage}
       live="https://catcall.zando.dev"
@@ -27,14 +27,14 @@ import DiceSlayerImage from '../assets/arduino.jpg';
     <ProjectCard
       title="Dice Slayer"
       description="A turn-based dungeon crawler built for the Adafruit Circuit Playground using C++, featuring dice-based combat, upgrade mechanics, and real-time visual feedback via NeoPixels"
-      skills={['Arduino', 'C++']}
+      skills={["Arduino", "C++"]}
       imageURL={DiceSlayerImage}
       repo="https://github.com/zandonella/Dice-Slayer"
     />
     <ProjectCard
       title="Portfolio Website"
       description="A personal portfolio site built with Astro and React to showcase my work, resume, and skills"
-      skills={['HTML', 'React', 'Astro', 'Tailwind CSS']}
+      skills={["HTML", "React", "Astro", "Tailwind CSS"]}
       imageURL={ZandoDevImage}
       live="https://zando.dev"
       repo="https://github.com/zandonella/portfolio-website"
@@ -42,7 +42,7 @@ import DiceSlayerImage from '../assets/arduino.jpg';
     <ProjectCard
       title="CAT Label Maker"
       description="A Python-based command-line tool that generates printable PDF labels with images from product catalog numbers, designed for small-scale inventory systems requiring efficient label generation"
-      skills={['Python']}
+      skills={["Python"]}
       imageURL={CATLabelMakerImage}
     />
   </div>

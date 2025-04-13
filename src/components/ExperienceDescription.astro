@@ -4,9 +4,9 @@ const { date, location, role, bullets } = Astro.props;
 
 <div class="flex flex-1 flex-col justify-start gap-1 leading-none">
   <p class="text-xs text-gray-400">{date}</p>
-  <h2 class="font-bold font-sans">{location}</h2>
-  <p class="text-gray-400 text-sm">{role}</p>
-  <ul class="list-outside ml-5 pr-12 list-disc leading-5 text-sm text-gray-300">
+  <h2 class="font-sans font-bold">{location}</h2>
+  <p class="text-sm text-gray-400">{role}</p>
+  <ul class="ml-5 list-outside list-disc pr-12 text-sm leading-5 text-gray-300">
     {bullets.map((bullet) => <li>{bullet}</li>)}
   </ul>
 </div>

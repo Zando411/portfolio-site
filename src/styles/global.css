@@ -1,37 +1,37 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import 'devicon/devicon.min.css';
+@import "devicon/devicon.min.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @font-face {
-    font-family: 'NotoSans';
-    src: url('/NotoSans-VariableFont_wdth,wght.ttf') format('truetype');
-    font-display: swap;
-    font-weight: 100 900;
+  font-family: "NotoSans";
+  src: url("/NotoSans-VariableFont_wdth,wght.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 900;
 }
 
 @font-face {
-    font-family: 'Inter';
-    src: url('/Inter-VariableFont_opsz\,wght.ttf') format('truetype');
-    font-display: swap;
-    font-weight: 100 900;
+  font-family: "Inter";
+  src: url("/Inter-VariableFont_opsz\,wght.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 100 900;
 }
 
 @theme {
-    --font-sans: 'NotoSans', 'sans-serif';
-    --font-inter: 'Inter', 'sans-serif';
+  --font-sans: "NotoSans", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
 
-    --animate-bounceOrig: bounceOrig 1.5s infinite;
-    @keyframes bounceOrig {
-        0%, 100% {
-          transform: translateY(0);
-          animation-timing-function: cubic-bezier(0.8,0,1,1);
-        }
-        50% {
-          transform: translateY(15%);
-          animation-timing-function: cubic-bezier(0,0,0.2,1);
-        }
+  --animate-bounceOrig: bounceOrig 1.5s infinite;
+  @keyframes bounceOrig {
+    0%,
+    100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
     }
+    50% {
+      transform: translateY(15%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
 }
-

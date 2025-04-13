@@ -3,32 +3,32 @@
 ---
 
 <script>
-  const logoContainer = document.getElementById('logo-container');
+  const logoContainer = document.getElementById("logo-container");
 
-  logoContainer.addEventListener('click', () => {
+  logoContainer.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   });
 </script>
 
 <footer
-  class="flex flex-col gap-2 md:grid md:grid-cols-3 w-full mt-8 mb-2 text-gray-400 text-xs items-center"
+  class="mt-8 mb-2 flex w-full flex-col items-center gap-2 text-xs text-gray-400 md:grid md:grid-cols-3"
 >
-  <p class="order-3 md:order-1 hover:text-gray-300">
+  <p class="order-3 hover:text-gray-300 md:order-1">
     © 2025 Michael Zandonella
   </p>
   <div
     id="logo-container"
-    class="flex justify-center items-center text-xl order-1 md:order-2 group h-12 w-16 relative mx-auto"
+    class="group relative order-1 mx-auto flex h-12 w-16 items-center justify-center text-xl md:order-2"
   >
     <svg
       id="logo"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="#f0f5ff"
-      class="w-16 h-12 opacity-100 group-hover:opacity-0 transition-opacity duration-200 absolute"
+      class="absolute h-12 w-16 opacity-100 transition-opacity duration-200 group-hover:opacity-0"
       ><path
         d="M5.19,7.57v-.1s-.22-.21-.22-.21L.11,12.14c-.07.07-.11.16-.11.26s.04.19.11.26l4.71,4.71.17.14.2-.23v-1.09l-3.8-3.8,3.8-3.82v-1.01Z"
       ></path><path
@@ -41,7 +41,7 @@
       id="wordmark"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 120 24"
-      class="w-24 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute cursor-pointer"
+      class="absolute h-6 w-24 cursor-pointer opacity-0 transition-opacity duration-200 group-hover:opacity-100"
       fill="#f0f5ff"
       ><path
         d="M.16,23.87c-.1-.09-.16-.26-.16-.52v-1.16c0-.28.03-.49.1-.63.07-.14.23-.37.48-.7L12.39,4.59c.18-.28.09-.42-.28-.42H1.52c-.23,0-.39-.05-.47-.15-.08-.1-.12-.25-.12-.47V.55C.93.18,1.1,0,1.42,0h19.14C20.91,0,21.08.17,21.08.52v1.33c0,.19-.03.36-.1.5-.07.14-.2.33-.38.57l-12.08,16.5c-.12.15-.13.25-.03.31.09.05.21.08.35.08h11.49c.42,0,.62.16.62.49v3.14c0,.17-.05.31-.16.42-.1.11-.27.16-.5.16H.73c-.28,0-.47-.04-.57-.13Z"
@@ -56,12 +56,12 @@
       ></path></svg
     >
   </div>
-  <div class="flex gap-2 justify-end order-2 md:order-3">
+  <div class="order-2 flex justify-end gap-2 md:order-3">
     <a
       href="https://github.com/zandonella"
       target="_blank"
       rel="noopener noreferrer"
-      class="p-1 rounded-xl transition-colors duration-200"
+      class="rounded-xl p-1 transition-colors duration-200"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +72,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="stroke-gray-400 hover:stroke-white w-6 h-6 transition-colors duration-200"
+        class="h-6 w-6 stroke-gray-400 transition-colors duration-200 hover:stroke-white"
         ><path
           d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
         ></path></svg
@@ -82,7 +82,7 @@
       href="https://www.linkedin.com/in/mzandonella/"
       target="_blank"
       rel="noopener noreferrer"
-      class="p-1 rounded-xl transition-colors duration-200"
+      class="rounded-xl p-1 transition-colors duration-200"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="stroke-gray-400 hover:stroke-white w-6 h-6 transition-colors duration-200"
+        class="h-6 w-6 stroke-gray-400 transition-colors duration-200 hover:stroke-white"
         ><path
           d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
         ></path><rect x="2" y="9" width="4" height="12"></rect><circle
@@ -104,7 +104,7 @@
     </a>
     <a
       href="mailto:michael@zandodev.com"
-      class="p-1 rounded-xl transition-colors duration-200"
+      class="rounded-xl p-1 transition-colors duration-200"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -115,7 +115,7 @@
         stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
-        class="stroke-gray-400 hover:stroke-white w-6 h-6 transition-colors duration-200"
+        class="h-6 w-6 stroke-gray-400 transition-colors duration-200 hover:stroke-white"
         ><path
           d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
         ></path><polyline points="22,6 12,13 2,6"></polyline></svg
